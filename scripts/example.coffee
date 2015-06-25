@@ -9,7 +9,11 @@
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
 module.exports = (robot) ->
-
+  robot.hear /slackbot/i, (res) ->
+    res.send "Pior bot do mundo!"
+  
+  robot.hear /matar (.*) slackbot/i, (res) ->
+    res.send "Eu ajudo!"
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
